@@ -22,6 +22,5 @@ class FindMaximumNumber:
 
 
 if __name__ == '__main__':
-    print("Welcome to max number program")
     intLargest = FindMaximumNumber(10, 30, 20)
     print("The largest number is", intLargest.find_max_num())

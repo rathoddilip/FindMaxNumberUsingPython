@@ -1,3 +1,6 @@
+from custom_exception import CustomError
+
+
 class FindMaximumNumber:
     num1 = 0
     num2 = 0
@@ -18,7 +21,7 @@ class FindMaximumNumber:
         elif (self.num3 > self.num1) and (self.num1 > self.num2):
             return self.num3
         else:
-            print("All number are same")
+            return "All number are same"
 
     def find_max_float_num(self):
 
@@ -29,4 +32,4 @@ class FindMaximumNumber:
         elif (self.num3 > self.num1) and (self.num1 > self.num2):
             return self.num3
         else:
-            print("All number are same")
+            raise CustomError("All number are same")

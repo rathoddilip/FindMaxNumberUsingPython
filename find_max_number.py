@@ -21,15 +21,18 @@ class FindMaximumNumber:
         elif (self.num3 > self.num1) and (self.num1 > self.num2):
             return self.num3
         else:
-            return "All number are same"
+            raise CustomError("All number are same")
 
     def find_max_float_num(self):
+        try:
+            if (self.num1 > self.num2) and (self.num1 > self.num3):
+                return self.num1
+            elif (self.num2 > self.num1) and (self.num2 > self.num3):
+                return self.num2
+            elif (self.num3 > self.num1) and (self.num1 > self.num2):
+                return self.num3
+            else:
+                raise CustomError
 
-        if (self.num1 > self.num2) and (self.num1 > self.num3):
-            return self.num1
-        elif (self.num2 > self.num1) and (self.num2 > self.num3):
-            return self.num2
-        elif (self.num3 > self.num1) and (self.num1 > self.num2):
-            return self.num3
-        else:
-            raise CustomError("All number are same")
+        except CustomError:
+            print("Custom Exception All number are same")

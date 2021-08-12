@@ -2,9 +2,6 @@ from custom_exception import CustomError
 
 
 class FindMaximumNumber:
-    num1 = 0
-    num2 = 0
-    num3 = 0
 
     # parameterized constructor
     def __init__(self, num1, num2, num3):
@@ -16,9 +13,9 @@ class FindMaximumNumber:
 
         if (self.num1 > self.num2) and (self.num1 > self.num3):
             return self.num1
-        elif (self.num2 > self.num1) and (self.num2 > self.num3):
+        elif self.num2 > self.num3:
             return self.num2
-        elif (self.num3 > self.num1) and (self.num1 > self.num2):
+        elif self.num3 > self.num1:
             return self.num3
         else:
             raise CustomError("All number are same")
@@ -27,12 +24,17 @@ class FindMaximumNumber:
         try:
             if (self.num1 > self.num2) and (self.num1 > self.num3):
                 return self.num1
-            elif (self.num2 > self.num1) and (self.num2 > self.num3):
+            elif self.num2 > self.num3:
                 return self.num2
-            elif (self.num3 > self.num1) and (self.num1 > self.num2):
+            elif self.num3 > self.num1:
                 return self.num3
             else:
                 raise CustomError
 
         except CustomError:
             print("Custom Exception All number are same")
+
+            ''''
+            docs string 
+            list and dictionary
+            lambda, filter and reduce'''
